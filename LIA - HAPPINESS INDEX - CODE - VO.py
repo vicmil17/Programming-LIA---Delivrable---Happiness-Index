@@ -24,5 +24,4 @@ data = np.loadtxt("world-happiness-report-2021.csv", delimiter=",", skiprows=1, 
 
 # each column seperately
 ladder, gdp, support, life, freedom, generosity, corruption = data.T
-print("Ladder sample:", ladder[:5]) 
-hi 
+print("Ladder sample:", ladder[:5])
