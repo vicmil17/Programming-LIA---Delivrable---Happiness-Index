@@ -21,4 +21,7 @@ freedom = data[:, 1] # second column (Freedom score)
 
 # We'll store only the values that meet our condition in these lists.
 filtered_ladder = []     # will store ladder scores that pass the filter
-filtered_freedom = []    # will store corresponding freedom values
+filtered_freedom = []    # will store corresponding freedom values 
+
+**OOPS I MADE A MISTAKE IN PUSHING THE CODE (WRONG LOCATION) ** 
+
