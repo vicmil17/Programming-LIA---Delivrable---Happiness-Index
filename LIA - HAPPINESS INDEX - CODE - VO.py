@@ -122,6 +122,32 @@ plt.grid(True)
 # Legend to distinguish the two series
 plt.legend()
 
+# ----------------------------------------------------------
+# 2) Two SUBPLOTS side-by-side in the same figure (counts as 1)
+# ----------------------------------------------------------
+# THOUGHT PROCESS 
+    # Show two related scatter plots side-by-side for quick comparison.
+    # These two side-by-side plots let us visually compare how happiness
+    # changes with GDP vs with social support. Both tend to show positive patterns
+# ----------------------------------------------------------
+
+plt.figure(figsize=(12, 5))
+
+# Left subplot: Ladder vs Logged GDP
+plt.subplot(1, 2, 1)                 # 1 row, 2 columns, left subplot
+plt.scatter(gdp, ladder, alpha=0.7)  # scatter shows relationship
+plt.title("Ladder vs Logged GDP per capita")
+plt.xlabel("Logged GDP per capita")
+plt.ylabel("Ladder (happiness)")
+plt.grid(True)  # grid can help see spread
+
+# Right subplot: Ladder vs Social support
+plt.subplot(1, 2, 2)                 # 1 row, 2 columns, right subplot
+plt.scatter(support, ladder, alpha=0.7)
+plt.title("Ladder vs Social Support")
+plt.xlabel("Social support (0–1)")
+plt.ylabel("Ladder (happiness)")
+plt.grid(True)
 
 
 
