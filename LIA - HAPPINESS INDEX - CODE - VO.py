@@ -88,3 +88,59 @@ import matplotlib.pyplot as plt
 
 country = np.genfromtxt("world-happiness-report-2021.csv", delimiter=",", skip_header=1, usecols=(0,), dtype=str)
 region = np.genfromtxt("world-happiness-report-2021.csv", delimiter=",", skip_header=1, usecols=(1,), dtype=str)
+  
+# ----------------------------------------------------------
+# 1) Multi-series LINE plot with different colors/styles + grid
+# ----------------------------------------------------------
+# THOUGHT PROCESS 
+    # Sort countries by Ladder score (descending) and plot
+    # Ladder vs rank alongside Freedom vs rank to compare trends.
+    # This plot helps visualize how a country's reported happiness
+    # (ladder) tends to move with its freedom score when countries are ordered
+    # by happiness ranking.
+    # plt.grid(True) => Adds horizontal and vertical reference lines to make the plot easier to read.
+# ----------------------------------------------------------
+
+idx = np.argsort(ladder)[::-1]  # indices that sort ladder high→low
+
+ladder_sorted  = ladder[idx]
+freedom_sorted = freedom[idx]
+
+plt.figure(figsize=(9, 5))
+# Plot 1 series (solid line, default color)
+plt.plot(ladder_sorted, label="Ladder score (happiness)", linestyle="-")  # line style: solid
+# Plot 2nd series (dashed line, automatically different color)
+plt.plot(freedom_sorted, label="Freedom to make life choices", linestyle="--")  # dashed
+
+# Title and axis labels (per spec a)
+plt.title("Happiness vs Freedom (countries ranked by Ladder score)")
+plt.xlabel("Country rank (by Ladder score)")
+plt.ylabel("Score (unitless)")
+
+plt.grid(True)
+
+# Legend to distinguish the two series
+plt.legend()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
