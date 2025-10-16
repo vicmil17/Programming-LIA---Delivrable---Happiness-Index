@@ -149,24 +149,19 @@ plt.xlabel("Social support (0–1)")
 plt.ylabel("Ladder (happiness)")
 plt.grid(True)
 
+# ----------------------------------------------------------
+# 3) SCATTER plot: Ladder vs Freedom (explicit separate figure)
+# ----------------------------------------------------------
+# THOUGHT PROCESS 
+    # This scatter tests whether greater personal freedom aligns with higher
+    # reported happiness. The cloud should trend upward if there’s a positive relation.
+    # alpha=0.7 → adds transparency so overlapping dots are visible.
+# ----------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+plt.figure(figsize=(7, 5))
+plt.scatter(freedom, ladder, alpha=0.7)
+plt.title("Ladder vs Freedom to make life choices")
+plt.xlabel("Freedom (0–1)")
+plt.ylabel("Ladder (happiness)")
+plt.grid(True)
 
